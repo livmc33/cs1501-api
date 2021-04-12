@@ -9,4 +9,9 @@ api = tweepy.api(auth)
 
 public_tweets = api.home_timeline()
 for tweet in public_tweets:
-    print(f"{tweet.user.name} said {tweet.text}")
+    tweets = api.get_status(4196983835) #user id
+    print(tweets.text) #print tweets from the user
+
+
+
+
